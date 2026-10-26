@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Submit without GitHub
+    url: https://motion-prompts.pages.dev/submit
+    about: Use the form or the copy template on the site instead.
+  - name: Contributor Terms
+    url: https://motion-prompts.pages.dev/terms
+    about: The licence and rules every submission follows.
