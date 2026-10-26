@@ -1,0 +1,104 @@
+name: Submit a motion prompt
+description: Share a motion prompt you wrote. We test every submission before it goes live.
+title: "[Prompt] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your work. Two ground rules before you start:
+
+        - **Issues in this repo are public.** There is deliberately no email field — do not paste a private email address anywhere in this form.
+        - The prompt and the video must be **your own work**, and by submitting you grant the free-use licence in the [Contributor Terms](https://motion-prompts.pages.dev/terms). You keep your copyright.
+  - type: input
+    id: entry_title
+    attributes:
+      label: Entry title
+      description: A short, descriptive title for the gallery entry.
+      placeholder: "e.g. Kinetic type showreel — words on the beat"
+    validations:
+      required: true
+  - type: textarea
+    id: prompt_text
+    attributes:
+      label: The full prompt
+      description: Paste the complete prompt text, exactly as you ran it. If parts are meant to be customised, mark them like {{this}}.
+    validations:
+      required: true
+  - type: input
+    id: video_url
+    attributes:
+      label: Video URL
+      description: A link to the video this prompt made — your post, or a direct link to the file.
+      placeholder: "https://…"
+    validations:
+      required: true
+  - type: dropdown
+    id: renderer
+    attributes:
+      label: Renderer / stack
+      options:
+        - HyperFrames
+        - Remotion
+        - Single-file HTML
+        - Other (say in the notes)
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Landscape (16:9)
+        - Square (1:1)
+        - Vertical (9:16)
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: A few words that describe it, e.g. kinetic type, logo reveal, charts.
+    validations:
+      required: false
+  - type: input
+    id: creator_name
+    attributes:
+      label: Your name or handle
+      description: Exactly as the credit on your entry should appear.
+    validations:
+      required: true
+  - type: input
+    id: creator_url
+    attributes:
+      label: Your profile URL
+      description: Where the credit should link — your X, GitHub, or site profile.
+      placeholder: "https://…"
+    validations:
+      required: false
+  - type: input
+    id: source_url
+    attributes:
+      label: Original post URL
+      description: If you already posted this prompt/video somewhere, link it — the entry will link back to it.
+      placeholder: "https://…"
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know? (optional)
+      description: Render iterations, what broke, tools used — honest notes make a better entry.
+    validations:
+      required: false
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights confirmation — all three are required
+      options:
+        - label: "This prompt and this video are my own work."
+          required: true
+        - label: "I grant MotionPrompts and its visitors the free-use licence in the Contributor Terms (https://motion-prompts.pages.dev/terms)."
+          required: true
+        - label: "Any brands, people, music or fonts shown are mine or cleared for this use."
+          required: true
