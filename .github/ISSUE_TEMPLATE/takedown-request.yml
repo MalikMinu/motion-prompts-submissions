@@ -1,0 +1,44 @@
+name: Takedown request
+description: Ask for an entry to be removed — your own entry, or work that infringes your rights.
+title: "[Takedown] "
+labels: ["takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What happens next is spelled out in the [Contributor Terms, section 9](https://motion-prompts.pages.dev/terms#takedown).
+        Our target for a complete request is removal within 7 days. One honest limit:
+        removal does not revoke the free-use licence for copies visitors already
+        lawfully downloaded before the removal.
+  - type: input
+    id: entry_url
+    attributes:
+      label: Entry URL on MotionPrompts
+      placeholder: "https://motion-prompts.pages.dev/…"
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your relationship to the work
+      options:
+        - I am the creator of this entry and want it removed
+        - I represent the creator
+        - My work (or my rights) appears in this entry without permission
+        - Other (explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: The work claimed, links that show it is yours, and anything else we need to verify the request.
+    validations:
+      required: true
+  - type: checkboxes
+    id: good_faith
+    attributes:
+      label: Good-faith statement — required
+      options:
+        - label: "I state in good faith that the use described above is not authorised by the rights holder, their agent, or the law, and that this notice is accurate."
+          required: true
